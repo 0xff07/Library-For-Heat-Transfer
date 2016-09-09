@@ -14,8 +14,9 @@
 * Too: 無窮遠處溫度（熱對流用)
 * m : sqrt(hP/Ak)，解ODE用的參數。init時自動算好
 * M : sqrt(hPkA)，解ODE用參數。init時自動算好
-* UNIFORM_FIN(k, h, L, P, A, T0, Too)的順序可以用「卡懶趴」 + 兩端 溫度來記憶。
-* T(x, type, Tl = 0)：輸入 x 與邊界條件種類，位置x的溫度。type 必須輸入邊界條件的名稱(是個字串)。可使用的種類有4種，'convectiom', 'adiabatic', 'constant temperature', 'infinite'. 只有'constant temperature'需要輸入給定的溫度邊界條件Tl，其餘Tl可忽視。
+* UNIFORM_FIN(k, h, L, P, A, T0, Too)的順序可以用「卡懶趴」 + 兩端溫度 來記憶。
+* T(x, type, Tl = 0)：輸入 x 與邊界條件種類，位置x的溫度。type 必須輸入邊界條件的名稱(是個字串)。可使用的種類有4種，'convection', 'adiabatic', 'constant temperature', 'infinite'. 只有'constant temperature'需要輸入給定的溫度邊界條件Tl，其餘Tl可忽視。
 * QRate(type, Tl = 0)：輸入邊界條件種類，輸出熱流率。因為是steady state且沒有heat source所以處處相等，不需要輸入位置，但是若邊界條件為'constant temperature'則需輸入邊界溫度Tl。
 * getResistance(type)：輸入邊界條件種類，輸出熱阻值。
+* 預計加入函數：fin effectness, fin efficiency, 多個fin並列的效能, 一些常用形狀的fin的經驗公式, fin equation solver（至少是某些特定狀況下的）。
 
